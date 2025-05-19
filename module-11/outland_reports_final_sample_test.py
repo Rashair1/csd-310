@@ -67,6 +67,7 @@ try:
     print("Equipment ID | Equipment Name | Date Purchased | Age (Years)")
     for row in cursor.fetchall():
         print(row)
+        df = pd.read_sql_query(query, connection)
 
     cursor.close()
     db.close()
